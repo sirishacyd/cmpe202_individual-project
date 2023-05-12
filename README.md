@@ -15,8 +15,8 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
 To build the project, execute the command mvn clean install in your terminal, which will clean the target directory, compile the source code, and generate the output artifacts
 ```
 siris-MacBook-Pro:indivi-202 siri$ mvn clean install
-
 ```
+
 ![build](screenshots/buildlogfile.txt)
 
 ## For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired CSV input file and the intended output file path
@@ -25,7 +25,7 @@ siris-MacBook-Pro:indivi-202 siri$ mvn clean install
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.csv src/main/resources/output_file-1.csv
 Output successfully written to src/main/resources/output_file-1.csv
-```
+
 ```
 siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.csv 
 
@@ -42,10 +42,7 @@ cardNumber,cardType
 5367894523129089,MasterCard
 6011*890HJrt6789,Invalid: non numeric characters
 ,Invalid: empty/null card number
-
 ```
-
-
 ###  For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired json input file and the intended output file path
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.json src/main/resources/output_file-1.json
@@ -92,7 +89,7 @@ siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.json
     "CardType" : "Invalid: empty/null card number"
   } ]
 }
-
+```
 ### ###  For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired xml input file and the intended output file path
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file.xml src/main/resources/output_file-1.xml
