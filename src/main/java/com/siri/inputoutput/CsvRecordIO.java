@@ -58,6 +58,7 @@ public class CsvRecordIO implements RecordIO {
 
     private CsvSchema getOutputSchema() {
         return CsvSchema.builder()
+                .setQuoteChar((char) 0)
                 .addColumn("cardNumber")
                 .addColumn("cardType")
                 .build()
@@ -73,6 +74,7 @@ public class CsvRecordIO implements RecordIO {
     private List<OutputRecord> getOutputRecords(List<CreditCard> creditCards) {
         return creditCards
                 .stream()
+                
                 .map(record -> {
                     String cardNumber = record.getCardNumber();
                     try {
