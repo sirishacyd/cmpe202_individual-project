@@ -55,7 +55,7 @@ public class JsonRecordIO implements RecordIO {
         ArrayNode cardsArray = rootNode.putArray("cards");
         for (OutputRecord outputRecord : outputRecordList) {
             ObjectNode cardNode = mapper.createObjectNode();
-            cardNode.put("cardNumber", outputRecord.getCardNumber() != null ? outputRecord.getCardNumber() : "");
+            cardNode.put("cardNumber", outputRecord.getCardNumber() != null ? outputRecord.getCardNumber() :null);
             cardNode.put("CardType", outputRecord.getCardType() != null ? outputRecord.getCardType() : "");
             cardsArray.add(cardNode);            
         }

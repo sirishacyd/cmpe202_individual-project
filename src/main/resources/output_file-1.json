@@ -33,7 +33,7 @@
     "cardNumber" : "6011*890HJrt6789",
     "CardType" : "Invalid: non numeric characters"
   }, {
-    "cardNumber" : "",
+    "cardNumber" : null,
     "CardType" : "Invalid: empty/null card number"
   } ]
 }
