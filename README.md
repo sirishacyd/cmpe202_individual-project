@@ -24,7 +24,7 @@ siris-MacBook-Pro:indivi-202 siri$ mvn clean install
 
 ![build](screenshots/buildlogfile.txt)
 
-## For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired CSV input file and the intended output file path
+For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired CSV input file and the intended output file path
 
 ## CSV
 ```
@@ -47,7 +47,7 @@ cardNumber,cardType
 6011*890HJrt6789,Invalid: non numeric characters
 ,Invalid: empty/null card number
 ```
-##  For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired json input file and the intended output file path
+For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired json input file and the intended output file path
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.json src/main/resources/output_file-1.json
 Output successfully written to src/main/resources/output_file-1.json
@@ -95,7 +95,7 @@ siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.json
   } ]
 }
 ```
-## For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired xml input file and the intended output file path
+For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired xml input file and the intended output file path
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file.xml src/main/resources/output_file-1.xml
 Output successfully written to src/main/resources/output_file-1.xml
@@ -154,7 +154,7 @@ siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.xml
 </CARDS>
 ```
 ## Validations
-## Ensure that the required number of arguments are passed during execution, as the program performs validations to check for the correct input and output file paths
+Ensure that the required number of arguments are passed during execution, as the program performs validations to check for the correct input and output file paths
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar 
 Invalid syntax. Usage: java Main <input filename> <output filename>
