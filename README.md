@@ -25,7 +25,7 @@ siris-MacBook-Pro:indivi-202 siri$ mvn clean install
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.csv src/main/resources/output_file-1.csv
 Output successfully written to src/main/resources/output_file-1.csv
-
+```
 ```
 siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.csv 
 cardNumber,cardType
@@ -46,6 +46,8 @@ cardNumber,cardType
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.json src/main/resources/output_file-1.json
 Output successfully written to src/main/resources/output_file-1.json
+```
+
 ```
 siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.json
 {
