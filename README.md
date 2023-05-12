@@ -1,4 +1,9 @@
-# individual-project-siri
+# Individual-project
+Course Name :Software Systems Engineering</br> 
+Project Name:Credit card problem</br>
+Student Name:[Sirisha Polisetty](https://www.linkedin.com/in/sirishapolisetty/)<br/>
+University Name:[San Jose State University](https://www.sjsu.edu/)<br/>
+Professor's Name:[gopinath V](https://www.linkedin.com/in/gopinath-v-75286719/)</br> 
 
 ## Java Version
 
@@ -11,8 +16,8 @@ Java(TM) SE Runtime Environment (build 1.8.0_333-b02)
 Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
 ```
 
-## 
-To build the project, execute the command mvn clean install in your terminal, which will clean the target directory, compile the source code, and generate the output artifacts
+## To build the project, execute the command mvn clean install in your terminal, which will clean the target directory, compile the source code, and generate the output artifacts
+
 ```
 siris-MacBook-Pro:indivi-202 siri$ mvn clean install
 ```
@@ -21,7 +26,7 @@ siris-MacBook-Pro:indivi-202 siri$ mvn clean install
 
 ## For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired CSV input file and the intended output file path
 
-### CSV
+## CSV
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.csv src/main/resources/output_file-1.csv
 Output successfully written to src/main/resources/output_file-1.csv
@@ -42,7 +47,7 @@ cardNumber,cardType
 6011*890HJrt6789,Invalid: non numeric characters
 ,Invalid: empty/null card number
 ```
-###  For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired json input file and the intended output file path
+##  For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired json input file and the intended output file path
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.json src/main/resources/output_file-1.json
 Output successfully written to src/main/resources/output_file-1.json
@@ -90,7 +95,7 @@ siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.json
   } ]
 }
 ```
-### ###  For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired xml input file and the intended output file path
+## For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired xml input file and the intended output file path
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file.xml src/main/resources/output_file-1.xml
 Output successfully written to src/main/resources/output_file-1.xml
@@ -149,7 +154,7 @@ siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.xml
 </CARDS>
 ```
 ## Validations
-### Ensure that the required number of arguments are passed during execution, as the program performs validations to check for the correct input and output file paths
+## Ensure that the required number of arguments are passed during execution, as the program performs validations to check for the correct input and output file paths
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar 
 Invalid syntax. Usage: java Main <input filename> <output filename>
