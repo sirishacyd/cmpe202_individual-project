@@ -57,12 +57,11 @@ public class CsvRecordIO implements RecordIO {
     }
 
     private CsvSchema getOutputSchema() {
-        return CsvSchema.builder()
-                .setQuoteChar((char) 0)
-                .addColumn("cardNumber")
-                .addColumn("cardType")
-                .build()
-                .withHeader();
+        CsvSchema.Builder schemaBuilder = CsvSchema.builder().disableQuoteChar();
+        schemaBuilder.addColumn("cardNumber");
+        schemaBuilder.addColumn("cardType");
+        CsvSchema schema = schemaBuilder.build().withHeader();
+        return schema;
     }
 
     private CsvMapper getCsvMapper() {
