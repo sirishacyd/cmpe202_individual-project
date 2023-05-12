@@ -28,7 +28,6 @@ Output successfully written to src/main/resources/output_file-1.csv
 
 ```
 siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.csv 
-
 cardNumber,cardType
 5567894523129089,MasterCard
 59012345678901234567890,Invalid: more than 19 digits
@@ -47,7 +46,6 @@ cardNumber,cardType
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.json src/main/resources/output_file-1.json
 Output successfully written to src/main/resources/output_file-1.json
-```
 ```
 siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.json
 {
@@ -147,7 +145,7 @@ siris-MacBook-Pro:indivi-202 siri$ cat src/main/resources/output_file-1.xml
     <CARD_TYPE>Invalid: empty/null card number</CARD_TYPE>
   </CARD>
 </CARDS>
-
+```
 ## Validations
 ### Ensure that the required number of arguments are passed during execution, as the program performs validations to check for the correct input and output file paths
 ```
