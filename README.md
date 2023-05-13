@@ -37,11 +37,17 @@ Overall, these design patterns enable a flexible and maintainable solution to ha
 ## Part 2 
 
 To extend the design to parse different input file formats (json, xml, csv) and detect the type of credit card, we can use the following approach:
-- File Identification Classes: Create separate classes for each file format (e.g., JSONRecordIO, XMLRecordIO, CSVRecordIO) responsible for parsing the input files and extracting credit card records.
-- Credit Card Detector: Implement a CreditCardDetector class that takes the parsed credit card records and identifies the type of credit card based on the card number using the same validation logic from Part 1.
-- Output Record Classes: Output Record classes for each file format (e.g., JSONRecordIO, XMLRecordIO, CSVRecordIO) responsible for generating the output files with the detected card type and any validation errors.
+File Identification Classes: Create separate classes for each file format (e.g., JSONRecordIO, XMLRecordIO, CSVRecordIO) responsible for parsing the input files and extracting credit card records.
+Credit Card Detector: Implement a CreditCardDetector class that takes the parsed credit card records and identifies the type of credit card based on the card number using the same validation logic from Part 1.
+Output Record Classes: Output Record classes for each file format (e.g., JSONRecordIO, XMLRecordIO, CSVRecordIO) responsible for generating the output files with the detected card type and any validation errors.
+Extension of the Part 1 for RecordIO Factory.
 
 ![recordio](diagrams/recordio_factory.png)
+The CreditCardDetector class checks a list of CreditCardRecord objects from the file parser and uses the same validation process as in Part 1 to determine the card type for each record. It then creates a list of CreditCardInfo objects that includes the card number, card type (if valid), and any errors (if invalid).
+
+The Output records classes use the list of CreditCardInfo objects to create an output file in the corresponding format (json, xml, csv) that includes the card number, card type, and error information (if applicable).
+
+Our design enables seamless integration of new file formats and their corresponding RecordIO and output record in the future. Each file format has its own parser and output generator class, making the system more modular and easily extensible. Moreover, the RecordIOFactory class can use the validation logic from Part 1 to identify the card type of different file formats.
 
 ## Complete Design
 
