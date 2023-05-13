@@ -43,8 +43,11 @@ To extend the design to parse different input file formats (json, xml, csv) and 
 
 ![recordio](diagrams/recordio_factory.png)
 
-## Overall Design
+## Complete Design
 The UML class diagram depicts the structure of the design for the given problem. Here is an explanation of the classes and their relationships:
+
+![recordio](diagrams/class_diagram.png)
+
 - Main: This class represents the main entry point of the application. It has the responsibility to handle command-line arguments, such as input and output file paths, and execute the necessary logic.
 - Utils: This class contains utility methods that validate the input and output file paths. It ensures that the paths exist and have the correct file extensions.
 - InputFile and OutputFile: These classes represent the input and output file paths, respectively.
@@ -59,7 +62,7 @@ CreditCardFactory: This class implements the Factory Method pattern and is respo
 The diagram also shows the relationships between the classes, such as associations, generalizations, and dependencies.
 The design is intended to be flexible and easy to expand using design patterns such as Factory Method, inheritance, and interface implementations. It divides tasks, such as handling input/output, validating credit cards, and creating objects, into separate classes, which helps ensure the code is modular and easy to maintain.
 
-![recordio](diagrams/class_diagram.png)
+
 
 ## Java Version
 
