@@ -5,26 +5,7 @@ Student Name:[Sirisha Polisetty](https://www.linkedin.com/in/sirishapolisetty/)<
 University Name:[San Jose State University](https://www.sjsu.edu/)<br/>
 Professor's Name:[gopinath V](https://www.linkedin.com/in/gopinath-v-75286719/)</br> 
 
-## Java Version
 
-Ensure you have Java version 1.8.0_333 installed and configured; you can check this by running java -version in your terminal before proceeding with the project setup.
-
-```
-siris-MacBook-Pro:indivi-202 siri$ java -version
-java version "1.8.0_333"
-Java(TM) SE Runtime Environment (build 1.8.0_333-b02)
-Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
-```
-
-## To build the project, execute the command mvn clean install in your terminal, which will clean the target directory, compile the source code, and generate the output artifacts
-
-```
-siris-MacBook-Pro:indivi-202 siri$ mvn clean install
-```
-
-[Build Log File](buildlogfile.log)
-
-For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired CSV input file and the intended output file path
 
 ## Part 1
 
@@ -79,6 +60,28 @@ The diagram also shows the relationships between the classes, such as associatio
 The design is intended to be flexible and easy to expand using design patterns such as Factory Method, inheritance, and interface implementations. It divides tasks, such as handling input/output, validating credit cards, and creating objects, into separate classes, which helps ensure the code is modular and easy to maintain.
 
 ![recordio](diagrams/class_diagram.png)
+
+## Java Version
+
+Ensure you have Java version 1.8.0_333 installed and configured; you can check this by running java -version in your terminal before proceeding with the project setup.
+
+```
+siris-MacBook-Pro:indivi-202 siri$ java -version
+java version "1.8.0_333"
+Java(TM) SE Runtime Environment (build 1.8.0_333-b02)
+Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
+```
+
+## To build the project, execute the command mvn clean install in your terminal, which will clean the target directory, compile the source code, and generate the output artifacts
+
+```
+siris-MacBook-Pro:indivi-202 siri$ mvn clean install
+```
+
+[Build Log File](buildlogfile.log)
+
+For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired CSV input file and the intended output file path
+
 ## CSV
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.csv src/main/resources/output_file-1.csv
