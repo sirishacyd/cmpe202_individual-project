@@ -47,7 +47,7 @@ cardNumber,cardType
 6011*890HJrt6789,Invalid: non numeric characters
 ,Invalid: empty/null card number
 ```
-## Json
+## JSON
 For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired json input file and the intended output file path
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.json src/main/resources/output_file-1.json
