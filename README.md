@@ -44,9 +44,9 @@ To extend the design to parse different input file formats (json, xml, csv) and 
 ![recordio](diagrams/recordio_factory.png)
 
 ## Complete Design
-The UML class diagram depicts the structure of the design for the given problem. Here is an explanation of the classes and their relationships:
 
 ![recordio](diagrams/class_diagram.png)
+The UML class diagram depicts the structure of the design for the implementation of the credit card parser problem. Here is an explanation of the classes and their relationships:
 
 - Main: This class represents the main entry point of the application. It has the responsibility to handle command-line arguments, such as input and output file paths, and execute the necessary logic.
 - Utils: This class contains utility methods that validate the input and output file paths. It ensures that the paths exist and have the correct file extensions.
