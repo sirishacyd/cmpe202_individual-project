@@ -22,7 +22,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
 siris-MacBook-Pro:indivi-202 siri$ mvn clean install
 ```
 
-![build](screenshots/buildlogfile.txt)
+[Build Log File](buildlogfile.log)
 
 For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired CSV input file and the intended output file path
 
