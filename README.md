@@ -26,6 +26,59 @@ siris-MacBook-Pro:indivi-202 siri$ mvn clean install
 
 For usage, run the command java -jar target/individual-project-siri.jar [input_file_path] [output_file_path] with the desired CSV input file and the intended output file path
 
+## Part 1
+
+The primary problem to solve is reading credit card records from a CSV file, verifying the validity of the credit card numbers, and creating instances of the appropriate credit card classes based on the card type.
+
+The secondary problems are:
+
+- Identifying the card type based on the credit card number.
+Creating the appropriate credit card class dynamically.
+- To solve these problems, we can use the following design patterns:
+
+Factory Method Pattern: We can create a CreditCardFactory class that encapsulates the logic for creating instances of the appropriate credit card classes based on the card type. The factory method will take the card type as input and return an instance of the corresponding credit card class. This pattern allows for the decoupling of object creation from the client code and provides a consistent interface for creating credit card objects.
+
+Strategy Pattern: We can use the Strategy pattern to encapsulate the validation algorithm for each card type. Each credit card class can implement its own validation strategy, allowing for flexibility and easy switching between different validation algorithms. This pattern promotes code reusability and maintainability.
+
+By utilizing the Factory Method pattern, the CreditCardFactory class can dynamically create instances of the appropriate credit card classes based on the card type identified. This pattern abstracts the creation logic and allows for easy extensibility by adding new subclasses for different credit card types.
+
+The Strategy pattern allows each credit card class to define its own validation strategy, encapsulating the validation algorithm within the respective classes. This makes it easy to add new credit card types in the future and simplifies the switching of validation strategies for different card types.
+
+The consequences of using these design patterns are:
+
+- Improved code maintainability: The Factory Method pattern decouples the client code from the specific credit card class implementations, allowing for easier modifications and extensions. It promotes the Open-Closed Principle, enabling the addition of new credit card types without modifying existing code.
+- Code reusability: The Strategy pattern encapsulates the validation logic within each credit card class, promoting code reuse and ensuring that the validation algorithm can be easily switched or extended for new requirements.
+- Modularity and extensibility: The use of design patterns provides a modular and extensible solution by separating concerns and providing clear interfaces for object creation and validation.
+
+Overall, these design patterns enable a flexible and maintainable solution to handle credit card records, identify card types, and create appropriate credit card objects.
+![recordio](diagrams/creditcard_factory.png)
+
+## Part 2 
+
+To extend the design to parse different input file formats (json, xml, csv) and detect the type of credit card, we can use the following approach:
+- File Identification Classes: Create separate classes for each file format (e.g., JSONRecordIO, XMLRecordIO, CSVRecordIO) responsible for parsing the input files and extracting credit card records.
+- Credit Card Detector: Implement a CreditCardDetector class that takes the parsed credit card records and identifies the type of credit card based on the card number using the same validation logic from Part 1.
+- Output Record Classes: Output Record classes for each file format (e.g., JSONRecordIO, XMLRecordIO, CSVRecordIO) responsible for generating the output files with the detected card type and any validation errors.
+
+![recordio](diagrams/recordio_factory.png)
+
+## Overall Design
+The UML class diagram depicts the structure of the design for the given problem. Here is an explanation of the classes and their relationships:
+- Main: This class represents the main entry point of the application. It has the responsibility to handle command-line arguments, such as input and output file paths, and execute the necessary logic.
+- Utils: This class contains utility methods that validate the input and output file paths. It ensures that the paths exist and have the correct file extensions.
+- InputFile and OutputFile: These classes represent the input and output file paths, respectively.
+- RecordIOFactory: This class is responsible for creating the appropriate RecordIO object based on the file format specified. It utilizes the Factory Method pattern to create the desired object.
+- RecordIO: This interface defines the contract for parsing files of different formats and returning a list of CreditCardRecord objects.
+- XmlRecordIO, CsvRecordIO, JsonRecordIO: These classes implement the RecordIO interface and provide specific implementations for parsing XML, CSV, and JSON files, respectively.
+- CreditCard: This class represents a generic credit card and contains common properties like cardNumber, expirationDate, and cardHolder. It also has a method validateCardNumber() that verifies the validity of the card number.
+- VisaCC, MasterCC, AmExCC, Discover: These classes are subclasses of CreditCard and represent specific types of credit cards. They inherit the properties and methods from the base class and may provide additional functionality specific to their card type.
+- OutputRecord: This class is responsible for writing a list of CreditCardRecord objects to the output file.
+CreditCardFactory: This class implements the Factory Method pattern and is responsible for creating instances of the appropriate credit card subclasses based on the card type specified.
+
+The diagram also shows the relationships between the classes, such as associations, generalizations, and dependencies.
+The design is intended to be flexible and easy to expand using design patterns such as Factory Method, inheritance, and interface implementations. It divides tasks, such as handling input/output, validating credit cards, and creating objects, into separate classes, which helps ensure the code is modular and easy to maintain.
+
+![recordio](diagrams/class_diagram.png)
 ## CSV
 ```
 siris-MacBook-Pro:indivi-202 siri$ java -jar target/individual-project-siri.jar src/main/resources/input_file-1.csv src/main/resources/output_file-1.csv
