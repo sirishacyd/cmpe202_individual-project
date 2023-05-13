@@ -9,12 +9,12 @@ Professor's Name:[gopinath V](https://www.linkedin.com/in/gopinath-v-75286719/)<
 
 ## Part 1
 
-The primary problem to solve is reading credit card records from a CSV file, verifying the validity of the credit card numbers, and creating instances of the appropriate credit card classes based on the card type.
+The primary problem to solve is reading credit card records from a file, verifying the validity of the credit card numbers, and creating instances of the appropriate credit card classes based on the card type.
 
 The secondary problems are:
 
 - Identifying the card type based on the credit card number.
-Creating the appropriate credit card class dynamically.
+- Creating the appropriate credit card class dynamically.
 - To solve these problems, we can use the following design patterns:
 
 Factory Method Pattern: We can create a CreditCardFactory class that encapsulates the logic for creating instances of the appropriate credit card classes based on the card type. The factory method will take the card type as input and return an instance of the corresponding credit card class. This pattern allows for the decoupling of object creation from the client code and provides a consistent interface for creating credit card objects.
@@ -38,20 +38,22 @@ Overall, these design patterns enable a flexible and maintainable solution to ha
 
 To extend the design to parse different input file formats (json, xml, csv) and detect the type of credit card, we can use the following approach:
 File Identification Classes: Create separate classes for each file format (e.g., JSONRecordIO, XMLRecordIO, CSVRecordIO) responsible for parsing the input files and extracting credit card records.
-Credit Card Detector: Implement a CreditCardDetector class that takes the parsed credit card records and identifies the type of credit card based on the card number using the same validation logic from Part 1.
+Credit Card Factory: Implement a CreditCardFactory class that takes the parsed credit card records and identifies the type of credit card based on the card number using the same validation logic from Part 1.
 Output Record Classes: Output Record classes for each file format (e.g., JSONRecordIO, XMLRecordIO, CSVRecordIO) responsible for generating the output files with the detected card type and any validation errors.
-Extension of the Part 1 for RecordIO Factory.
+
+Extension of the Part 1 for RecordIO and Credit Card Factory.
 
 ![recordio](diagrams/recordio_factory.png)
-The CreditCardDetector class checks a list of CreditCardRecord objects from the file parser and uses the same validation process as in Part 1 to determine the card type for each record. It then creates a list of CreditCardInfo objects that includes the card number, card type (if valid), and any errors (if invalid).
+The CreditCard Factory class checks a list of CreditCardFatory objects from the file parser and uses the same validation process as in Part 1 to determine the card type for each record. It then creates a list of CreditCardInfo objects that includes the card number, card type (if valid), and any errors (if invalid).
 
-The Output records classes use the list of CreditCardInfo objects to create an output file in the corresponding format (json, xml, csv) that includes the card number, card type, and error information (if applicable).
+The OutputRecords classes use the list of CreditCardInfo objects to create an output file in the corresponding format (json, xml, csv) that includes the card number, card type, and error information (if applicable).
 
 Our design enables seamless integration of new file formats and their corresponding RecordIO and output record in the future. Each file format has its own parser and output generator class, making the system more modular and easily extensible. Moreover, the RecordIOFactory class can use the validation logic from Part 1 to identify the card type of different file formats.
 
 ## Complete Design
 
 ![recordio](diagrams/class_diagram.png)
+
 The UML class diagram depicts the structure of the design for the implementation of the credit card parser problem. Here is an explanation of the classes and their relationships:
 
 - Main: This class represents the main entry point of the application. It has the responsibility to handle command-line arguments, such as input and output file paths, and execute the necessary logic.
