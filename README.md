@@ -1,4 +1,4 @@
-# Individual-project
+# Individual-project-sirisha
 Course Name :Software Systems Engineering</br> 
 Project Name:Credit card problem</br>
 Student Name:[Sirisha Polisetty](https://www.linkedin.com/in/sirishapolisetty/)<br/>
